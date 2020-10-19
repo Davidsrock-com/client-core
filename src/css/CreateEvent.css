@@ -1,0 +1,66 @@
+.event-container {
+  width: 40%;
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.event-title {
+  color: rgba(201, 54, 54, 0.986);
+  text-align: center;
+  font-size: 40px;
+}
+
+.desc-text,
+.event-container input {
+  width: 40% !important;
+}
+
+.event-container label {
+  width: 30% !important;
+  margin-left: 10% !important;
+  margin-right: 5px !important;
+  font-size: 16px !important;
+  text-align: center;
+}
+
+.event-checkbox {
+  position: relative !important;
+  top: 2px;
+}
+
+.online-label {
+  white-space: nowrap;
+}
+
+.alert {
+  background-color: rgb(16, 176, 16);
+  text-align: center;
+  padding: 5px;
+  display: none;
+  margin-bottom: 10px;
+}
+
+.event-btn {
+  width: 40% !important;
+  margin-top: 2% !important;
+  background-color: rgba(201, 54, 54, 0.986) !important;
+  color: white !important;
+}
+
+.btn-sec {
+  text-align: center !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .event-container {
+    width: 100%;
+  }
+  .event-container label {
+    margin-left: 5% !important;
+    margin-right: 30px !important;
+  }
+}

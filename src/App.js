@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Container } from "semantic-ui-react";
 
-function App() {
+import CreateEvent from "./pages/CreateEvent";
+import CreateGroup from "./pages/CreateGroup";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+
+import Navigation from "./components/Navigation";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //Routes + Navigation
+    <Router>
+      <Container>
+        <Navigation />
+        <Route exact path="/" component={Home} />
+        <Route path="/create-group" component={CreateGroup} />
+        <Route path="/create-event" component={CreateEvent} />
+        <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
+      </Container>
+    </Router>
   );
-}
+};
 
 export default App;

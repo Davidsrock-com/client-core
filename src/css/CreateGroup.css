@@ -1,0 +1,46 @@
+.group-container {
+  width: 40%;
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.group-title {
+  color: rgba(201, 54, 54, 0.986);
+  text-align: center;
+  font-size: 40px;
+}
+
+.group-form-label {
+  font-size: 18px !important;
+  text-align: center !important;
+  margin-top: 10px !important;
+}
+
+.group-btn {
+  width: 40% !important;
+  margin-top: 2% !important;
+  background-color: rgba(201, 54, 54, 0.986) !important;
+  color: white !important;
+}
+
+.btn-sec {
+  text-align: center !important;
+}
+
+.alert {
+  background-color: rgb(16, 176, 16);
+  text-align: center;
+  padding: 5px;
+  display: none;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .group-container {
+    width: 100%;
+  }
+}
