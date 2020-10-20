@@ -1,3 +1,22 @@
+.alert {
+  background-color: rgb(16, 176, 16);
+  text-align: center;
+  padding: 5px;
+  display: none;
+  margin-bottom: 20px;
+}
+
+.btn-sec {
+  text-align: center !important;
+}
+
+.error-message {
+  color: red !important;
+  display: block !important;
+  text-align: center !important;
+  font-size: 1em !important;
+}
+
 .group-container {
   width: 40%;
   border: 1px solid black;
@@ -27,19 +46,11 @@
   color: white !important;
 }
 
-.btn-sec {
-  text-align: center !important;
-}
-
-.alert {
-  background-color: rgb(16, 176, 16);
-  text-align: center;
-  padding: 5px;
-  display: none;
-  margin-bottom: 20px;
-}
-
 @media only screen and (max-width: 600px) {
+  .error-message {
+    margin-left: 3%;
+  }
+
   .group-container {
     width: 100%;
   }

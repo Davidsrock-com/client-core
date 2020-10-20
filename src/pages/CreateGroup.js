@@ -36,7 +36,7 @@ const CreateGroup = () => {
                 required: "Required",
               })}
             />
-            <p style={{ color: "red" }}>
+            <p className="error-message">
               {errors.location && errors.location.message}
             </p>
           </div>
@@ -48,7 +48,9 @@ const CreateGroup = () => {
                 required: "Required",
               })}
             />
-            <p style={{ color: "red" }}>{errors.name && errors.name.message}</p>
+            <p className="error-message">
+              {errors.name && errors.name.message}
+            </p>
           </div>
           <div className="field">
             <label className="group-form-label">
@@ -60,7 +62,7 @@ const CreateGroup = () => {
                 required: "Required",
               })}
             />
-            <p style={{ color: "red" }}>
+            <p className="error-message">
               {errors.details && errors.details.message}
             </p>
           </div>
@@ -81,7 +83,7 @@ const CreateGroup = () => {
                 required: "Required",
               })}
             />
-            <p style={{ color: "red" }}>
+            <p className="error-message">
               {errors.invite && errors.invite.message}
             </p>
           </div>

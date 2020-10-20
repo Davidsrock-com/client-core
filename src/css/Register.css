@@ -11,11 +11,12 @@
   text-align: center !important;
 }
 
-.si-btn {
-  width: 100% !important;
-}
 .esignup-title {
   text-align: center;
+}
+
+.signup-btn {
+  width: 100% !important;
 }
 
 .signup-login {

@@ -1,3 +1,20 @@
+.alert {
+  background-color: rgb(16, 176, 16);
+  text-align: center;
+  padding: 5px;
+  display: none;
+  margin-bottom: 10px;
+}
+
+.btn-sec {
+  text-align: center !important;
+}
+
+.desc-text,
+.event-container input {
+  width: 40% !important;
+}
+
 .event-container {
   width: 40%;
   border: 1px solid black;
@@ -14,11 +31,6 @@
   font-size: 40px;
 }
 
-.desc-text,
-.event-container input {
-  width: 40% !important;
-}
-
 .event-container label {
   width: 30% !important;
   margin-left: 10% !important;
@@ -31,17 +43,15 @@
   position: relative !important;
   top: 2px;
 }
+.error-message {
+  color: red !important;
+  display: block !important;
+  text-align: center !important;
+  font-size: 1em !important;
+}
 
 .online-label {
   white-space: nowrap;
-}
-
-.alert {
-  background-color: rgb(16, 176, 16);
-  text-align: center;
-  padding: 5px;
-  display: none;
-  margin-bottom: 10px;
 }
 
 .event-btn {
@@ -51,10 +61,6 @@
   color: white !important;
 }
 
-.btn-sec {
-  text-align: center !important;
-}
-
 @media only screen and (max-width: 600px) {
   .event-container {
     width: 100%;
@@ -62,5 +68,13 @@
   .event-container label {
     margin-left: 5% !important;
     margin-right: 30px !important;
+  }
+
+  .event-checkbox {
+    display: flex;
+    flex-direction: row;
+  }
+  .error-message {
+    margin-left: 10%;
   }
 }

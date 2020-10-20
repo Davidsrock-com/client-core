@@ -86,7 +86,7 @@ const Register = (props) => {
             </p>
           </div>
           <div className="esignup-btn">
-            <button className="ui red button si-btn" type="submit">
+            <button className="ui red button signup-btn" type="submit">
               Sign Up
             </button>
           </div>

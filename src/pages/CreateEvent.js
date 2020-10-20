@@ -7,7 +7,7 @@ import "../css/CreateEvent.css";
 //Documentation for React hooks form https://react-hook-form.com/
 
 const CreateEvent = () => {
-  const { handleSubmit, register, errors, reset } = useForm();
+  const { handleSubmit, register, errors, reset, getValues } = useForm();
   const alertRef = useRef();
 
   const onSubmit = (values) => {
@@ -36,7 +36,9 @@ const CreateEvent = () => {
                 required: "Required",
               })}
             />
-            <p style={{ color: "red" }}>{errors.name && errors.name.message}</p>
+            <p className="error-message">
+              {errors.name && errors.name.message}
+            </p>
           </div>
           <div className="inline field">
             <label>Event Type</label>
@@ -53,7 +55,7 @@ const CreateEvent = () => {
                 required: "Required",
               })}
             />
-            <p style={{ color: "red" }}>
+            <p className="error-message">
               {errors.location && errors.location.message}
             </p>
           </div>
@@ -78,7 +80,7 @@ const CreateEvent = () => {
                 required: "Required",
               })}
             />
-            <p style={{ color: "red" }}>
+            <p className="error-message">
               {errors.startDate && errors.startDate.message}
             </p>
           </div>
@@ -89,9 +91,14 @@ const CreateEvent = () => {
               name="endDate"
               ref={register({
                 required: "Required",
+                validate: {
+                  datesCompare: (value) =>
+                    value > getValues().startDate ||
+                    "Start date must be before end date!",
+                },
               })}
             />
-            <p style={{ color: "red" }}>
+            <p className="error-message">
               {errors.endDate && errors.endDate.message}
             </p>
           </div>
@@ -103,7 +110,7 @@ const CreateEvent = () => {
                 required: "Required",
               })}
             />
-            <p style={{ color: "red" }}>
+            <p className="error-message">
               {errors.invite && errors.invite.message}
             </p>
           </div>
