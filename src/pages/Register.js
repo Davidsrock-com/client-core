@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import Recaptcha from "react-recaptcha";
 
 import { Link } from "react-router-dom";
 
@@ -13,8 +14,25 @@ import "../css/Register.css";
 const Register = (props) => {
   const { handleSubmit, register, errors, getValues } = useForm();
 
+  //Recaptcha verification state
+  const [isVerified, setVerify] = useState(false);
+
+  const recaptchaLoaded = () => {
+    console.log("captcha sucessfully loaded");
+  };
+
   const onSubmit = (values) => {
-    console.log(values);
+    if (isVerified) {
+      console.log(values);
+    } else {
+      alert("Please verify that you are a human!");
+    }
+  };
+
+  const verifyCallback = (response) => {
+    if (response) {
+      setVerify(true);
+    }
   };
 
   return (
@@ -89,6 +107,16 @@ const Register = (props) => {
             <button className="ui red button signup-btn" type="submit">
               Sign Up
             </button>
+          </div>
+          <div className="recaptcha">
+            <Recaptcha
+              //We would need to replace the site key using the gmail account for DavidsRock http://www.google.com/recaptcha/admin
+              sitekey="xxxxxxxxxxxxxxxxxxxxxx"
+              render="explicit"
+              verifyCallback={verifyCallback}
+              onloadCallback={recaptchaLoaded}
+              size="normal"
+            />
           </div>
         </form>
 
