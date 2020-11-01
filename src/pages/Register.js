@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Recaptcha from "react-recaptcha";
-
 import { Link } from "react-router-dom";
+
+import { CAPTCHA_KEY } from "../config";
 
 import "../css/Register.css";
 
@@ -111,7 +112,7 @@ const Register = (props) => {
           <div className="recaptcha">
             <Recaptcha
               //We would need to replace the site key using the gmail account for DavidsRock http://www.google.com/recaptcha/admin
-              sitekey="xxxxxxxxxxxxxxxxxxxxxx"
+              sitekey={CAPTCHA_KEY}
               render="explicit"
               verifyCallback={verifyCallback}
               onloadCallback={recaptchaLoaded}
